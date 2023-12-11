@@ -7,6 +7,21 @@ The application and database have been containerized with Docker and can interac
 
 ![Logical Application Architecture Diagram](assets/arch_diagram.jpeg)
 
+#See if ports are in use
+
+sudo lsof -i TCP:3306
+
+Sudo kill pidNUM
+
+
+#Start a MYSQL container
+
+docker run --detach --env MYSQL_ROOT_PASSWORD=password --env MYSQL_DATABASE=catalog --name mysql --network mynet --publish 3306:3306 mysql:latest
+
+#Start the application container
+
+
+docker run --name microservice-container --network mynet -p 8080:8080 microserv 
 
 
 From Microsoft 
