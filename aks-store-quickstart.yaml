@@ -176,7 +176,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: product-service
-        image: ghcr.io/azure-samples/aks-store-demo/product-service:latest
+        image: https://hub.docker.com/r/rickstop/microserv
         ports:
         - containerPort: 3002
         resources:
